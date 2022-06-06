@@ -27,6 +27,7 @@ public class Controller : MonoBehaviour
 
     private float _gravityScaleInitial;
 
+    public bool Hide;
     void Start()
     {
         _coefSpeed = 1;
@@ -39,6 +40,8 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
+        
+
         if (_isGrounded == true)
         {
             extraJumps = extraJumpsValue;
@@ -101,6 +104,30 @@ public class Controller : MonoBehaviour
     {
         _rb.velocity = Vector3.zero;
     }
+    private void OnTriggerStay2D(Collider2D other)
+    {
 
+        if (other.tag == "Rocher")
+        {
+            Hide = true;
+        }
+
+        if (other.tag == "Target")
+        {
+            if (Hide == false)
+            {
+                //death
+                Debug.Log("i'm dead ono");
+            }
+           
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Rocher")
+        {
+            Hide = false;
+        }
+    }
 
 }
