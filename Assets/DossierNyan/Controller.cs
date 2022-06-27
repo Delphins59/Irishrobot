@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Controller : MonoBehaviour
 {
+    public UnityEvent _onmove;
+    public UnityEvent _onidle;
     public float _speed;
 
     public float _coefSpeed;
@@ -59,6 +62,7 @@ public class Controller : MonoBehaviour
 
             _rb.velocity = Vector2.up * _jumpForce;
         }
+        
     }
 
     void FixedUpdate()
@@ -66,8 +70,22 @@ public class Controller : MonoBehaviour
         _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _whatIsGrounded);
 
         _moveInput = Input.GetAxis("Horizontal");
-        if (_moveInput > 0 || _moveInput < 0) animator.SetBool("Walk", true);
-        else animator.SetBool("Walk", false);
+        if (_moveInput > 0 || _moveInput < 0)  { 
+                
+                
+               animator.SetBool("Walk", true);
+            _onmove.Invoke();
+
+        
+        }
+
+        else
+        {
+
+            animator.SetBool("Walk", false);
+            _onidle.Invoke();
+
+        } 
 
         if (_InverseControls)
         {
@@ -90,6 +108,7 @@ public class Controller : MonoBehaviour
 
         _rb.gravityScale = _gravityScaleInitial;
         _rb.velocity = new Vector2(_rb.velocity.x * _coefSpeed, _rb.velocity.y);
+        
     }
 
     void Flip()

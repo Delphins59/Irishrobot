@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bras gauche
+  m_Name: Bassin
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _EMISSION _NORMALMAP _OCCLUSIONMAP
   m_LightmapFlags: 2
@@ -21,11 +21,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: b9143498e2d112642bc10e76cde74bd0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 67add5288e902364780e6d6ac81a7d00, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 747b2270fede2f84ca2e47874890064a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 134c59a91f01c92428f9092e9e6ec929, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -41,11 +41,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 24fc9c5c2bede9d449397635fad08e4d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5f6e2e7a8e905924fa796cdf43b3fd51, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b9143498e2d112642bc10e76cde74bd0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 67add5288e902364780e6d6ac81a7d00, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -53,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: e923e58baab73784d88fd7ad37e10119, type: 3}
+        m_Texture: {fileID: 2800000, guid: 581336191dfa53a41b95f4b96b074f74, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -106,10 +106,10 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.49474904, g: 0.9622642, b: 0.9253376, a: 1}
+    - _EmissionColor: {r: 0.47749814, g: 0.7973318, b: 0.8603976, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &80560044968066271
+--- !u!114 &3613457138423996061
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
